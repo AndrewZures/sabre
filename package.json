@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/styled-components": "^3.0.1",
+    "@types/styled-system": "^3.0.3",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "husky": "^0.14.3",
@@ -10,7 +12,9 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-scripts-ts": "2.17.0",
-    "react-test-renderer": "^16.5.0"
+    "react-test-renderer": "^16.5.0",
+    "styled-components": "^3.4.6",
+    "styled-system": "^3.0.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -22,16 +26,18 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.10",
-    "@storybook/addon-info": "^3.4.10",
-    "@storybook/addon-links": "^3.4.10",
-    "@storybook/addons": "^3.4.10",
+    "@storybook/addon-actions": "4.0.0-alpha.3",
+    "@storybook/addon-info": "4.0.0-alpha.3",
+    "@storybook/addon-knobs": "4.0.0-alpha.3",
+    "@storybook/addon-links": "4.0.0-alpha.3",
+    "@storybook/addons": "4.0.0-alpha.3",
     "@storybook/react": "4.0.0-alpha.3",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.9.4",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
     "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-knobs": "^3.4.1",
     "@types/storybook__addon-links": "^3.3.2",
     "@types/storybook__react": "^3.0.9",
     "awesome-typescript-loader": "^5.2.1",
