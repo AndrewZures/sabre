@@ -14,3 +14,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - If you don't have the required node version run: `nvm install` - this will auto download the required node version
 - upgrade your `npm` version to the latest version: `npm install npm@latest -g`
 - install dependencies: `npm install`
+
+#### Basics
+- To run locally, run `npm run start` and go to `localhost:3000`
+- to run tests, run `npm run test`
+- to build for production run `npm run build`
