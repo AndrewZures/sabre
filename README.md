@@ -19,4 +19,5 @@ You can find the most recent version of this guide [here](https://github.com/fac
 #### Basics
 - To run locally, run `npm run start` and go to `localhost:3000`
 - to run tests, run `npm run test`
-- to build for production run `npm run build`   
+- to run tests with coverage, run `npm run test -- --coverage`
+- to build for production run `npm run build`

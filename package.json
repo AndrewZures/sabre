@@ -7,7 +7,6 @@
     "enzyme-adapter-react-16": "^1.5.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
-    "prettier": "^1.14.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-scripts-ts": "2.17.0",
@@ -18,13 +17,29 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-info": "^3.4.10",
+    "@storybook/addon-links": "^3.4.10",
+    "@storybook/addons": "^3.4.10",
+    "@storybook/react": "4.0.0-alpha.3",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.9.4",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-links": "^3.3.2",
+    "@types/storybook__react": "^3.0.9",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "prettier": "^1.14.2",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "ts-jest": "^23.1.4",
     "typescript": "^3.0.3"
   },
   "lint-staged": {
