@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './library/theme/theme';
+import { theme } from '../../theme/theme';
 
-import { Card } from './library/atoms/Card/Card';
-import { Box } from './library/atoms/Container/Box';
+import { Card } from '../../atoms/Card/Card';
+import { Box } from '../../atoms/Container/Box';
 
-import { Table as Table2 } from './library/organism/Table/Table2';
+import { Table as Table2 } from './Table2';
 
 
 export class TableTest extends React.Component {
