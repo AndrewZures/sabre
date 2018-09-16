@@ -1,8 +1,17 @@
 import { applyMiddleware, createStore } from "redux";
-import { rootReducer } from './reducers/rootReducer';
+import { createEpicMiddleware } from 'redux-observable';
+
+import logger from 'redux-logger';
+import { rootEpic } from './rootEpic';
+import { rootReducer } from './rootReducer';
 
 // middleware
-import logger from 'redux-logger';
+const epicMiddleware = createEpicMiddleware();
+const middleware = applyMiddleware(logger, epicMiddleware);
 
-const middleware = applyMiddleware(logger);
-export const store = createStore(rootReducer, middleware);
+// store creation
+export function configureStore() {
+    const store = createStore(rootReducer, middleware);
+    epicMiddleware.run(rootEpic);
+    return store;
+}

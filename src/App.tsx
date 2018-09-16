@@ -8,11 +8,13 @@ import OldApp from './OldApp'
 
 import { ThemeProvider } from './library/theme/ThemeProvider';
 
-import { store } from './store/store';
-
 // domain routers
 import AppRouter from './domains/apps/AppRouter';
-import ExampleRouter from './domains/examples/ExampleRouter';
+import ExampleRouter from './domains/examples/components/ExampleRouter';
+
+// create store
+import { configureStore } from './store/store';
+const store = configureStore();
 
 class App extends React.Component {
   public render() {

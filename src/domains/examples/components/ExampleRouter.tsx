@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import { Route, Switch  } from 'react-router-dom'
 
-import Counter from './components/counter/Counter';
-import { ExampleIndex } from './components/ExampleIndex';
-import Tacos from './components/tacos/Tacos';
+import Counter from './counter/Counter';
+import { ExampleIndex } from './ExampleIndex';
+import Tacos from './tacos/Tacos';
 
 export default class ExampleRouter extends React.Component {
   public render() {
