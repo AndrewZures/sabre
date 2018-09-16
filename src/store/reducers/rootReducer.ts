@@ -1,5 +1,8 @@
-export function rootReducer(state: any, action: any) {
-    switch (action.type) {
-        default: return state;
-    }
-}
+import { combineReducers } from "redux";
+
+// domain reducers
+import { exampleReducer } from "../../domains/examples/reducers/exampleReducer";
+
+export const rootReducer = combineReducers({
+    examples: exampleReducer,
+})

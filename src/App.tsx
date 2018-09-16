@@ -4,12 +4,15 @@ import { BrowserRouter, Route, Switch  } from 'react-router-dom'
 
 import { theme } from './library/theme/theme';
 
-import AppRouter from './domains/apps/AppRouter';
 import OldApp from './OldApp'
 
 import { ThemeProvider } from './library/theme/ThemeProvider';
 
 import { store } from './store/store';
+
+// domain routers
+import AppRouter from './domains/apps/AppRouter';
+import ExampleRouter from './domains/examples/ExampleRouter';
 
 class App extends React.Component {
   public render() {
@@ -19,6 +22,7 @@ class App extends React.Component {
                  <BrowserRouter>
                      <Switch>
                          <Route path='/apps' component={AppRouter} />
+                         <Route path='/examples' component={ExampleRouter} />
                          <Route path='/' component={OldApp} exact={true} />
                      </Switch>
                  </BrowserRouter>
