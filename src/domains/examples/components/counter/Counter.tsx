@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import * as exampleActions from '../actions/exampleActions';
+import * as exampleActions from '../../actions/exampleActions';
 
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 interface Props {
@@ -11,13 +12,26 @@ interface Props {
     count: number;
 }
 
-const container = {
+const pageContainer = {
     width: '100vw',
     height: '100vh',
+}
+
+const link = {
+    textDecoration: 'none',
+    color: 'grey',
+    padding: '8px',
+}
+
+const container = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'orange'
+}
+
+const contentContainer = {
+    ...container,
+    height: '80vh',
 }
 
 const inputContainer = {
@@ -47,11 +61,14 @@ const buttonInput = {
 class Example extends React.Component<Props> {
     public render() {
         return (
-            <div style={container}>
-                <div style={inputContainer}>
-                    <button style={buttonInput} onClick={this.props.increment}>&#43;</button>
-                    <div style={input}>{this.props.count}</div>
-                    <button style={buttonInput} onClick={this.props.decrement}>&#45;</button>
+            <div style={pageContainer}>
+                <Link style={link} to="/examples">&lt; All Examples</Link>
+                <div style={contentContainer}>
+                    <div style={inputContainer}>
+                        <button style={buttonInput} onClick={this.props.increment}>&#43;</button>
+                        <div style={input}>{this.props.count}</div>
+                        <button style={buttonInput} onClick={this.props.decrement}>&#45;</button>
+                    </div>
                 </div>
             </div>
         );
