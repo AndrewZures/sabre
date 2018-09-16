@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme/theme';
 
 import { storiesOf } from '@storybook/react';
@@ -10,6 +9,8 @@ import { TextDropdown } from './TextDropdown';
 
 import { Animation } from '../../atoms/Animation/Animation';
 import { Card } from '../../atoms/Card/Card';
+import { ThemeProvider } from '../../theme/ThemeProvider';
+
 
 const stories = storiesOf('Library/Molecules/TextDropdown', module)
 stories.addDecorator(withKnobs)

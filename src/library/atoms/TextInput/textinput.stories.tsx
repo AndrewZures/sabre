@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme/theme';
 
 import { object, select, text, withKnobs } from '@storybook/addon-knobs';
@@ -7,6 +6,9 @@ import { object, select, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import { TextInput, variants } from './TextInput';
+
+import { ThemeProvider } from 'styled-components';
+
 
 const stories = storiesOf('Library/Atoms/TextInput', module)
 stories.addDecorator(withKnobs)

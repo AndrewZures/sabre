@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme/theme';
 
 import { withKnobs } from '@storybook/addon-knobs';
@@ -11,6 +10,9 @@ import { Theme } from '../../theme/types';
 
 import { Animation } from '../../atoms/Animation/Animation';
 
+import { ThemeProvider } from '../../theme/ThemeProvider';
+
+
 
 const stories = storiesOf('Library/Atoms/Colors', module)
 stories.addDecorator(withKnobs)
@@ -18,7 +20,7 @@ stories.addDecorator(withKnobs)
 stories.add('default', () => {
     return (
         <ThemeProvider theme={theme}>
-            <Box variant="centered" styling={{ p: 7, fontFamily: 'sans-serif' }}>
+            <Box variant="centered" styling={{ p: 7 }}>
                 <Box variant="horizontalCentered" styling={{ maxWidth: 950, flexGrow: '1', }}>
                     {renderTable(colors)}
                 </Box>

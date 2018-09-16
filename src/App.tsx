@@ -3,26 +3,24 @@ import './App.css';
 
 import { BrowserRouter, Route, Switch  } from 'react-router-dom'
 
-// import { ThemeProvider } from 'styled-components';
-
 import { theme } from './library/theme/theme';
 
 import AppRouter from './domains/apps/AppRouter';
 import OldApp from './OldApp'
 
-import { WrappedThemeProvider } from './library/theme/WrappedThemeProvider';
+import { ThemeProvider } from './library/theme/ThemeProvider';
 
 class App extends React.Component {
   public render() {
     return (
-        <WrappedThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <Switch>
                     <Route path='/apps' component={AppRouter} />
                     <Route path='/' component={OldApp} exact={true} />
                 </Switch>
             </BrowserRouter>
-       </WrappedThemeProvider>
+       </ThemeProvider>
     );
   }
 }

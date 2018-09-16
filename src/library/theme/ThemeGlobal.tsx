@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ThemeGlobal = styled('div')`
-    font-family: ${props => props.theme.fonts.sansSerif };
-    font-size: ${props => props.theme.fontSizes[2] };
+    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+    font-family: 'Source Sans Pro';
+    box-sizing: border-box;
 `

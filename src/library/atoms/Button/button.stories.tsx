@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { theme } from '../../theme/theme';
 
 import { text, withKnobs } from '@storybook/addon-knobs';
@@ -10,6 +9,9 @@ import { Button, Hi } from './Button';
 
 import { action } from '@storybook/addon-actions';
 import { Box } from '../Container/Box';
+
+import { ThemeProvider } from '../../theme/ThemeProvider';
+
 
   const stories = storiesOf('Library/Atoms/Button', module)
   stories.addDecorator(withKnobs)

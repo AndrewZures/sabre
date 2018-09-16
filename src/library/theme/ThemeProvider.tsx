@@ -1,20 +1,20 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider as BaseThemeProvider } from 'styled-components';
 import { ThemeGlobal } from './ThemeGlobal';
 
-interface WrappedThemeProviderProps {
+interface ThemeProviderProps {
     theme: any,
     children?: any,
 }
 
-export class WrappedThemeProvider extends React.Component<WrappedThemeProviderProps> {
+export class ThemeProvider extends React.Component<ThemeProviderProps> {
     public render() {
         return (
-            <ThemeProvider theme={this.props.theme}>
+            <BaseThemeProvider theme={this.props.theme}>
                 <ThemeGlobal>
                     {this.props.children}
                 </ThemeGlobal>
-            </ThemeProvider>
+            </BaseThemeProvider>
         );
     }
 }

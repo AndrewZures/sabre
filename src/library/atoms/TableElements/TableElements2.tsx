@@ -20,9 +20,7 @@ export const Table = (props: any) => {
     return <RawTable {...props} styling={tableProps} />
 }
 
-export const Thead = styled('thead')<SpaceProps & ColorProps>`
-    box-sizing: border-box;
-`
+export const Thead = styled('thead')<SpaceProps & ColorProps>``
 
 // const theadProps = {
 //     backgroundColor: '#F5F7FA',
