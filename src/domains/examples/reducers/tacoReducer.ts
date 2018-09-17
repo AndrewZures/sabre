@@ -6,7 +6,7 @@ export const initialExampleState = {
 
 export function tacoReducer(state: any = initialExampleState, action: any) {
     switch (action.type) {
-        case tacoActions.TACO_RECIPE_RECIEVED:
+        case tacoActions.TACO_RECIPE_RECEIVED:
             return {...state, recipe: action.data.recipe}
         default:
             return state;
